@@ -1,34 +1,27 @@
+# Dependencies
 markdown:         redcarpet
 pygments:         true
 
 # Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+permalink:        pretty
 
 # Setup
-title:               Ben Carothers
-tagline:
-url:                 http://bencarothers.me
-paginate:            1
-baseurl:             ""
+title:            Ben Carothers 
+tagline:          'The personal website of Ben Carothers'
+description:      'The personal website of Ben Carothers'
+url:              bencarothers.me
 
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
-
-# About/contact
 author:
-  name:              Ben Carothers 
-  url:               https://twitter.com/carothersb
-  email:             benjamin.carothers13@ncf.edu
+  name:           'Ben Carothers'
+  url:            https://twitter.com/CarothersB
+
+paginate:         1
 
 # Custom vars
-version:             2.0.0
-github:              https://github.com/bencarothers
+version:          1.0.0
 
+github:
+  repo:           github.com/bencarothers/bencarothers.github.io
+
+# This is the list of pages to incldue in the header of the website.
 pages_list:       {'About':'/about','Archive':'/archive','Feed':'/atom.xml'}
