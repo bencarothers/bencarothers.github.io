@@ -5,9 +5,9 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Poole
+title:               Ben Carothers
 tagline:             The Jekyll Butler
-url:                 http://getpoole.com
+url:                 http://bencarothers.me
 paginate:            1
 baseurl:             ""
 
@@ -20,11 +20,11 @@ sass:
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Ben Carothers 
+  url:               https://twitter.com/carothersb
+  email:             benjamin.carothers13@ncf.edu
 
 # Custom vars
 version:             2.0.0
-github:
-  repo:              https://github.com/poole/poole
+github:              https://github.com/bencarothers
+  repo:
