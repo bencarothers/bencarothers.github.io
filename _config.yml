@@ -1,3 +1,6 @@
+markdown:         redcarpet
+pygments:         true
+
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
@@ -6,7 +9,7 @@ relative_permalinks: true
 
 # Setup
 title:               Ben Carothers
-tagline:             
+tagline:
 url:                 http://bencarothers.me
 paginate:            1
 baseurl:             ""
