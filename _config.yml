@@ -6,7 +6,7 @@ relative_permalinks: true
 
 # Setup
 title:               Ben Carothers
-tagline:             The Jekyll Butler
+tagline:             
 url:                 http://bencarothers.me
 paginate:            1
 baseurl:             ""
@@ -27,3 +27,5 @@ author:
 # Custom vars
 version:             2.0.0
 github:              https://github.com/bencarothers
+
+pages_list:       {'About':'/about','Archive':'/archive','Feed':'/atom.xml'}
