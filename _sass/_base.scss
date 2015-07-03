@@ -30,7 +30,13 @@ body {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-
+.hero {
+  height: 400px;
+  background-color: #fd7f05;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+}
 // No `:visited` state is required by default (browsers will use `a`)
 a {
   color: #268bd2;
