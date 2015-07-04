@@ -1,13 +1,13 @@
 # Site settings
-title: Clean Blog
+title: Ben Carothers 
 header-img: img/home-bg.jpg
-email: your-email@yourdomain.com
+email: benjamin.carothers13@ncf.edu
 description: "Write your site description here. It will be used as your sites meta description as well!"
-baseurl: "/startbootstrap-clean-blog-jekyll"
-url: "http://yourdomain.com"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  IronSummitMedia
+baseurl: "/ben"
+url: "http://bencarothers.me"
+twitter_username: bntcrs 
+github_username: bencarothers 
+facebook_username: benjamin.carothers.1 
 
 # Build settings
 markdown: kramdown
