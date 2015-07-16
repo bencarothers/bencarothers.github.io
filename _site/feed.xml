@@ -5,9 +5,110 @@
     <description>Write your site description here. It will be used as your sites meta description as well!</description>
     <link>http://bencarothers.me/</link>
     <atom:link href="http://bencarothers.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 14 Jul 2015 15:49:09 -0400</pubDate>
-    <lastBuildDate>Tue, 14 Jul 2015 15:49:09 -0400</lastBuildDate>
+    <pubDate>Thu, 16 Jul 2015 14:54:25 -0400</pubDate>
+    <lastBuildDate>Thu, 16 Jul 2015 14:54:25 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Regex For The Masses</title>
+        <description>&lt;p&gt;*—
+layout:     post
+title:      “Regex For The Masses”
+subtitle:   “Everyone Can Love Regular Expressions”
+date:       2015-07-14 3:10:00
+author:     “Ben Carothers”
+header-img: “img/garden.jpg”
+—&lt;/p&gt;
+
+&lt;p&gt;
+Regular expressions, sequences of characters that define patterns, are widely applicable and strangely controversial.
+They can definitely be fickle and buggy. Often because they&#39;re so terse and condensed regular expressions are 
+less readable than equivalent counterparts. However, they&#39;re a fundamental aspect of modern software and
+for that reason alone simple regular expressions are a crucial part of any developers skill base.
+&lt;/p&gt;
+
+&lt;h2 class=&quot;section-heading&quot;&gt;Everyone Searches.&lt;/h2&gt;
+
+&lt;p&gt;
+Cory Doctorow once wrote that regular expressions should be included as a core part of our education -- along side
+word processors and PowerPoint. Though I want to stress that I love regex, I think that this is a bogus.
+&lt;/p&gt;
+
+&lt;p&gt;
+Foundationally, computer programs are built around the foundation of manipulating characters -- searching, matching,
+and acting according to what was found. For this reason a tool such as regular expressions can be invaluable for 
+developers, but the time spent learning and creating regex might outweigh the benefits for your average searcher.
+&lt;/p&gt;
+
+&lt;h2 class=&quot;section-heading&quot;&gt;Daily Use&lt;/h2&gt;
+
+&lt;p&gt;
+####Matching an Email
+&lt;/p&gt;
+
+&lt;p&gt;
+^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$
+&lt;/p&gt;
+&lt;p&gt;
+There&#39;s a lot of controversy about the correct regex for matching an email address, but there&#39;s no doubt that this could 
+be useful for anyone. Searching a document for multiple addresses could be done instantly.
+&lt;/p&gt;
+&lt;p&gt;
+As for the make up of the pattern: 
+First we look for any number of valid symbols followed by an @ symbol 
+then similarly any number of symbols followed by a period 
+and finally 2 to 6 characters
+&lt;/p&gt;
+&lt;p&gt;
+The trade off here between complexity and accuracy wouldn&#39;t be an issue for everyday usage.
+&lt;/p&gt;
+
+&lt;p&gt;
+####Matching a Phone Number:
+&lt;/p&gt;
+&lt;p&gt;
+^[\d]{3,}$
+&lt;/p&gt;
+&lt;p&gt;
+Much like matching emails finding phone numbers is another dead simple way that regex can be incredibly useful.
+This pattern is as simple as finding 3 or more digit 
+&lt;/p&gt;
+&lt;p&gt;
+This is a great example of a regex that is absolutely inefficient and inexact that would be perfectly ok for an
+average user looking for phone numbers.
+&lt;/p&gt;
+&lt;p&gt;
+Matching phone numbers can get incredibly complex which is exactly why I don&#39;t think non-developers need a super strong
+foundation in regular expressions, but rather the bare minimum
+&lt;/p&gt;
+&lt;p&gt;
+####Matching White Space:
+&lt;/p&gt;
+
+&lt;p&gt;
+####Matching White Space:
+&lt;/p&gt;
+&lt;p&gt;
+[^\S\r\n]{2,}
+&lt;/p&gt;
+&lt;p&gt;
+Here is a pattern that eliminates some of the frustrations in cleaning up text documents.
+&lt;/p&gt;
+&lt;p&gt;
+Simply match 2 or more white space characters and then replace them with one. 
+Dead simple and really useful.
+&lt;/p&gt;
+
+&lt;p&gt;
+Regular Expressions are everywhere. I think they&#39;re useful for everyone -- probably more so for nerds.
+&lt;/p&gt;
+</description>
+        <pubDate>Thu, 16 Jul 2015 00:00:00 -0400</pubDate>
+        <link>http://bencarothers.me/2015/07/16/Regex-For-The-Masses/</link>
+        <guid isPermaLink="true">http://bencarothers.me/2015/07/16/Regex-For-The-Masses/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Gardening with Pi</title>
@@ -58,7 +159,6 @@ to control your valves in any way imaginable. Then, connect the Pi to the OSPI a
 for a drip valve simply because my drip system had already been put in place. Finally, whatever program you decide to use is available
 through port forwarding and your garden can be watered from anywhere with internet access. 
 &lt;/p&gt;
-&lt;p&gt;\&lt;/p&gt;
 
 &lt;p&gt;
 So far the system is working beautifully. I opted to write a program that scrapes a Twitter account and parses watering commands because
