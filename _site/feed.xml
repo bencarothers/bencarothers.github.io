@@ -5,22 +5,13 @@
     <description>Write your site description here. It will be used as your sites meta description as well!</description>
     <link>http://bencarothers.me/</link>
     <atom:link href="http://bencarothers.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 16 Jul 2015 14:54:25 -0400</pubDate>
-    <lastBuildDate>Thu, 16 Jul 2015 14:54:25 -0400</lastBuildDate>
+    <pubDate>Thu, 16 Jul 2015 14:59:53 -0400</pubDate>
+    <lastBuildDate>Thu, 16 Jul 2015 14:59:53 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Regex For The Masses</title>
-        <description>&lt;p&gt;*—
-layout:     post
-title:      “Regex For The Masses”
-subtitle:   “Everyone Can Love Regular Expressions”
-date:       2015-07-14 3:10:00
-author:     “Ben Carothers”
-header-img: “img/garden.jpg”
-—&lt;/p&gt;
-
-&lt;p&gt;
+        <description>&lt;p&gt;
 Regular expressions, sequences of characters that define patterns, are widely applicable and strangely controversial.
 They can definitely be fickle and buggy. Often because they&#39;re so terse and condensed regular expressions are 
 less readable than equivalent counterparts. However, they&#39;re a fundamental aspect of modern software and
@@ -103,9 +94,9 @@ Dead simple and really useful.
 Regular Expressions are everywhere. I think they&#39;re useful for everyone -- probably more so for nerds.
 &lt;/p&gt;
 </description>
-        <pubDate>Thu, 16 Jul 2015 00:00:00 -0400</pubDate>
-        <link>http://bencarothers.me/2015/07/16/Regex-For-The-Masses/</link>
-        <guid isPermaLink="true">http://bencarothers.me/2015/07/16/Regex-For-The-Masses/</guid>
+        <pubDate>Wed, 15 Jul 2015 23:00:00 -0400</pubDate>
+        <link>http://bencarothers.me/2015/07/15/Regex-For-The-Masses/</link>
+        <guid isPermaLink="true">http://bencarothers.me/2015/07/15/Regex-For-The-Masses/</guid>
         
         
       </item>

@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Write your site description here. It will be used as your sites meta description as well!">
 
-    <title>Ben Carothers</title>
+    <title>Regex For The Masses - Ben Carothers</title>
 
-    <link rel="canonical" href="http://bencarothers.me/">
+    <link rel="canonical" href="http://bencarothers.me/2015/07/15/Regex-For-The-Masses/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -75,61 +75,128 @@
 </nav>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/garden.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Ben Carothers</h1>
-                    <hr class="small">
-                    <span class="subheading"></span>
+                <div class="post-heading">
+                    <h1>Regex For The Masses</h1>
+                    
+                    <h2 class="subheading">Everyone Can Love Regular Expressions</h2>
+                    
+                    <span class="meta">Posted by Ben Carothers on July 15, 2015</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-<div class="post-preview">
-    <a href="/2015/07/15/Regex-For-The-Masses/">
-        <h2 class="post-title">            Regex For The Masses
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Everyone Can Love Regular Expressions
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by Ben Carothers on July 15, 2015</p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="post-preview">
-    <a href="/2015/07/13/Gardening-With-Pi/">
-        <h2 class="post-title">            Gardening with Pi
-        </h2>
-        
-        <h3 class="post-subtitle">
-            How Python, Twitter, and the Raspberry Pi are growing my plants.
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by Ben Carothers on July 13, 2015</p>
-</div>
-<hr>
+				<p>
+Regular expressions, sequences of characters that define patterns, are widely applicable and strangely controversial.
+They can definitely be fickle and buggy. Often because they're so terse and condensed regular expressions are 
+less readable than equivalent counterparts. However, they're a fundamental aspect of modern software and
+for that reason alone simple regular expressions are a crucial part of any developers skill base.
+</p>
+
+<h2 class="section-heading">Everyone Searches.</h2>
+
+<p>
+Cory Doctorow once wrote that regular expressions should be included as a core part of our education -- along side
+word processors and PowerPoint. Though I want to stress that I love regex, I think that this is a bogus.
+</p>
+
+<p>
+Foundationally, computer programs are built around the foundation of manipulating characters -- searching, matching,
+and acting according to what was found. For this reason a tool such as regular expressions can be invaluable for 
+developers, but the time spent learning and creating regex might outweigh the benefits for your average searcher.
+</p>
+
+<h2 class="section-heading">Daily Use</h2>
+
+<p>
+####Matching an Email
+</p>
+
+<p>
+^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$
+</p>
+<p>
+There's a lot of controversy about the correct regex for matching an email address, but there's no doubt that this could 
+be useful for anyone. Searching a document for multiple addresses could be done instantly.
+</p>
+<p>
+As for the make up of the pattern: 
+First we look for any number of valid symbols followed by an @ symbol 
+then similarly any number of symbols followed by a period 
+and finally 2 to 6 characters
+</p>
+<p>
+The trade off here between complexity and accuracy wouldn't be an issue for everyday usage.
+</p>
+
+<p>
+####Matching a Phone Number:
+</p>
+<p>
+^[\d]{3,}$
+</p>
+<p>
+Much like matching emails finding phone numbers is another dead simple way that regex can be incredibly useful.
+This pattern is as simple as finding 3 or more digit 
+</p>
+<p>
+This is a great example of a regex that is absolutely inefficient and inexact that would be perfectly ok for an
+average user looking for phone numbers.
+</p>
+<p>
+Matching phone numbers can get incredibly complex which is exactly why I don't think non-developers need a super strong
+foundation in regular expressions, but rather the bare minimum
+</p>
+<p>
+####Matching White Space:
+</p>
+
+<p>
+####Matching White Space:
+</p>
+<p>
+[^\S\r\n]{2,}
+</p>
+<p>
+Here is a pattern that eliminates some of the frustrations in cleaning up text documents.
+</p>
+<p>
+Simply match 2 or more white space characters and then replace them with one. 
+Dead simple and really useful.
+</p>
+
+<p>
+Regular Expressions are everywhere. I think they're useful for everyone -- probably more so for nerds.
+</p>
 
 
-<!-- Pager -->
+                <hr>
 
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2015/07/13/Gardening-With-Pi/" data-toggle="tooltip" data-placement="top" title="Gardening with Pi">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
 
-		</div>
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 
