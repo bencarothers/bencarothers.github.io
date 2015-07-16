@@ -76,7 +76,7 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/garden.jpg')">
+<header class="intro-header" style="background-image: url('/img/regex.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -120,9 +120,7 @@ developers, but the time spent learning and creating regex might outweigh the be
 
 <h2 class="section-heading">Daily Use</h2>
 
-<p>
-####Matching an Email
-</p>
+<h4 id="matching-an-email">Matching an Email</h4>
 
 <p>
 ^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$
@@ -141,9 +139,8 @@ and finally 2 to 6 characters
 The trade off here between complexity and accuracy wouldn't be an issue for everyday usage.
 </p>
 
-<p>
-####Matching a Phone Number:
-</p>
+<h4 id="matching-a-phone-number">Matching a Phone Number:</h4>
+
 <p>
 ^[\d]{3,}$
 </p>
@@ -159,13 +156,9 @@ average user looking for phone numbers.
 Matching phone numbers can get incredibly complex which is exactly why I don't think non-developers need a super strong
 foundation in regular expressions, but rather the bare minimum
 </p>
-<p>
-####Matching White Space:
-</p>
 
-<p>
-####Matching White Space:
-</p>
+<h4 id="matching-white-space">Matching White Space:</h4>
+
 <p>
 [^\S\r\n]{2,}
 </p>
