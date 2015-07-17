@@ -5,8 +5,8 @@
     <description></description>
     <link>http://bencarothers.me/</link>
     <atom:link href="http://bencarothers.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 17 Jul 2015 15:35:27 -0400</pubDate>
-    <lastBuildDate>Fri, 17 Jul 2015 15:35:27 -0400</lastBuildDate>
+    <pubDate>Fri, 17 Jul 2015 16:31:10 -0400</pubDate>
+    <lastBuildDate>Fri, 17 Jul 2015 16:31:10 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -166,6 +166,75 @@ worry about thirsty plants. Plus, the system is highly extensible so it leaves e
         <pubDate>Mon, 13 Jul 2015 23:10:00 -0400</pubDate>
         <link>http://bencarothers.me/2015/07/13/Gardening-With-Pi/</link>
         <guid isPermaLink="true">http://bencarothers.me/2015/07/13/Gardening-With-Pi/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Comprehensions in Python</title>
+        <description>&lt;p&gt;
+Python is a really elegantly constructed language that comes packaged with a large library of natural, powerful features. 
+I see the language constantly bombarded with criticisms that largely seem to be coming from developers that fail to adopt
+a pythonic style of code.
+&lt;/p&gt;
+
+&lt;p&gt;
+The for loop is one of the first learned and most used snippets of code for any new language. Python is no exception to this
+fact
+&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+numbers = [1,2,3]
+numbers_squared = []
+for number in numbers:
+    number **= 2
+    numbers_squared.append(number)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;
+Here we have a list of 3 numbers. All we&#39;re looking to do is take each and square it, so that numbers becomes a list of each of its
+elements squared. So what&#39;s wrong with this code? Functionally, nothing. We end up with numbers_squared and can carry on with whatever
+task we we&#39;re initially trying to tackle. But is this idiomatic, pythonic code? Not quite.
+&lt;/p&gt;
+
+&lt;h2 class=&quot;section-heading&quot;&gt;Comprehensions&lt;/h2&gt;
+
+&lt;p&gt;
+List comprehensions are a super easy way to make your code much more readable, cleaner and more efficient. They&#39;re simple and powerful 
+and, personally, I think they should be taught right along with for loops.
+&lt;/p&gt;
+
+&lt;p&gt;So, how could we accomplish the same functionality using comprehensions?&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+numbers = [1,2,3]
+numbers_squared = [number**2 for number in numbers]
+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Four lines are quickly condensed to one and the code is both more beautiful and also more readable.&lt;/p&gt;
+
+&lt;p&gt;Similarly we could do a few more involved operations&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+numbers = [1,2,3]
+numbers_exponentiated = [[number**2,number**3,number**4] for number in numbers]
+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+Comprehensions also can be nested or used to construct dictionaries. Here we&#39;re creating a dictionary with the numbers as keys and 
+squares as values:
+&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+numbers = [1,2,3]
+numbers_squared = {number:number**2 for number in numbers}
+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+Python is really well constructed and full of features so don&#39;t knock it too hard before you do a little but of exploring.
+&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 13 Jul 2015 23:10:00 -0400</pubDate>
+        <link>http://bencarothers.me/2015/07/13/Comprehensions-In-Python/</link>
+        <guid isPermaLink="true">http://bencarothers.me/2015/07/13/Comprehensions-In-Python/</guid>
         
         
       </item>
