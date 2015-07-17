@@ -5,8 +5,8 @@
     <description></description>
     <link>http://bencarothers.me/</link>
     <atom:link href="http://bencarothers.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 17 Jul 2015 16:36:18 -0400</pubDate>
-    <lastBuildDate>Fri, 17 Jul 2015 16:36:18 -0400</lastBuildDate>
+    <pubDate>Fri, 17 Jul 2015 17:19:40 -0400</pubDate>
+    <lastBuildDate>Fri, 17 Jul 2015 17:19:40 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -22,7 +22,7 @@ The for loop is one of the first learned and most used snippets of code for any 
 fact
 &lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;python
+&lt;p&gt;&lt;code&gt;
 numbers = [1,2,3]
 numbers_squared = []
 for number in numbers:
@@ -45,7 +45,7 @@ and, personally, I think they should be taught right along with for loops.
 
 &lt;p&gt;So, how could we accomplish the same functionality using comprehensions?&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;python
+&lt;p&gt;&lt;code&gt;
 numbers = [1,2,3]
 numbers_squared = [number**2 for number in numbers]
 &lt;/code&gt;&lt;/p&gt;
@@ -53,7 +53,7 @@ numbers_squared = [number**2 for number in numbers]
 
 &lt;p&gt;Similarly we could do a few more involved operations&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;python
+&lt;p&gt;&lt;code&gt;
 numbers = [1,2,3]
 numbers_exponentiated = [[number**2,number**3,number**4] for number in numbers]
 &lt;/code&gt;&lt;/p&gt;
@@ -62,7 +62,7 @@ Comprehensions also can be nested or used to construct dictionaries. Here we&#39
 squares as values:
 &lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;python
+&lt;p&gt;&lt;code&gt;
 numbers = [1,2,3]
 numbers_squared = {number:number**2 for number in numbers}
 &lt;/code&gt;&lt;/p&gt;
