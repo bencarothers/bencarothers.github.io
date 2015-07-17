@@ -124,9 +124,10 @@ developers, but the time spent learning and creating regex might outweigh the be
 
 <h4 id="matching-an-email">Matching an Email</h4>
 
-<p>
+<pre><code>
 ^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$
-</p>
+</code>
+
 <p>
 There's a lot of controversy about the correct regex for matching an email address, but there's no doubt that this could 
 be useful for anyone. Searching a document for multiple addresses could be done instantly.
@@ -141,11 +142,12 @@ and finally 2 to 6 characters
 The trade off here between complexity and accuracy wouldn't be an issue for everyday usage.
 </p>
 
-<h4 id="matching-a-phone-number">Matching a Phone Number:</h4>
+####Matching a Phone Number:
 
-<p>
-^[\d]{3,}$
-</p>
+<pre><code>
+ ^[\d]{3,}$
+</code>
+
 <p>
 Much like matching emails finding phone numbers is another dead simple way that regex can be incredibly useful.
 This pattern is as simple as finding 3 or more digit 
@@ -159,11 +161,12 @@ Matching phone numbers can get incredibly complex which is exactly why I don't t
 foundation in regular expressions, but rather the bare minimum
 </p>
 
-<h4 id="matching-white-space">Matching White Space:</h4>
+####Matching White Space:
 
-<p>
-[^\S\r\n]{2,}
-</p>
+<pre><code>
+ [^\S\r\n]{2,}
+</code>
+
 <p>
 Here is a pattern that eliminates some of the frustrations in cleaning up text documents.
 </p>
@@ -175,6 +178,7 @@ Dead simple and really useful.
 <p>
 Regular Expressions are everywhere. I think they're useful for everyone -- probably more so for nerds.
 </p>
+</pre></pre></pre>
 
 
                 <hr>
