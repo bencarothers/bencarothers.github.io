@@ -111,13 +111,12 @@ The for loop is one of the first learned and most used snippets of code for any 
 fact
 </p>
 
-<p><code>
-numbers = [1,2,3]
+<pre><code class="language-python">numbers = [1,2,3]
 numbers_squared = []
 for number in numbers:
     number **= 2
     numbers_squared.append(number)
-</code></p>
+</code></pre>
 
 <p>
 Here we have a list of 3 numbers. All we're looking to do is take each and square it, so that numbers becomes a list of each of its
@@ -134,27 +133,27 @@ and, personally, I think they should be taught right along with for loops.
 
 <p>So, how could we accomplish the same functionality using comprehensions?</p>
 
-<p><code>
-numbers = [1,2,3]
+<pre><code class="language-python">numbers = [1,2,3]
 numbers_squared = [number**2 for number in numbers]
-</code></p>
+</code></pre>
+
 <p>Four lines are quickly condensed to one and the code is both more beautiful and also more readable.</p>
 
 <p>Similarly we could do a few more involved operations</p>
 
-<p><code>
-numbers = [1,2,3]
+<pre><code class="language-python">numbers = [1,2,3]
 numbers_exponentiated = [[number**2,number**3,number**4] for number in numbers]
-</code></p>
+</code></pre>
+
 <p>
 Comprehensions also can be nested or used to construct dictionaries. Here we're creating a dictionary with the numbers as keys and 
 squares as values:
 </p>
 
-<p><code>
-numbers = [1,2,3]
+<pre><code class="language-python">numbers = [1,2,3]
 numbers_squared = {number:number**2 for number in numbers}
-</code></p>
+</code></pre>
+
 <p>
 Python is really well constructed and full of features so don't knock it too hard before you do a little bit of exploring.
 </p>
