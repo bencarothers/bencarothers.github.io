@@ -5,9 +5,78 @@
     <description></description>
     <link>http://bencarothers.me/</link>
     <atom:link href="http://bencarothers.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 17 Jul 2015 21:38:34 -0400</pubDate>
-    <lastBuildDate>Fri, 17 Jul 2015 21:38:34 -0400</lastBuildDate>
+    <pubDate>Sun, 19 Jul 2015 22:49:48 -0400</pubDate>
+    <lastBuildDate>Sun, 19 Jul 2015 22:49:48 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Reviving Killed Tmux Sessions</title>
+        <description>&lt;p&gt;
+Tmux has become an integral part of my workflow during the past couple of months.
+Keeping sessions configured and running keeps my work organized by delegating windows and panes to specific tasks.
+&lt;/p&gt;
+
+&lt;p&gt;
+One problem I&#39;ve encountered, however, is that I don&#39;t like to keep my machine running constantly, so every time I shutdown
+I lose meticulously configured sessions. This is pretty annoying because I seldom work on project for only a single day.
+&lt;/p&gt;
+
+&lt;p&gt;
+For instance, I like to keep a session for note taking and studying, which I use for an entire semester, and having to configure windows and panes 
+repeatedly completely destroys the benefits I gain from this system.
+&lt;/p&gt;
+&lt;p&gt;
+Luckily, there&#39;s a widely available project called Tmuxinator that allows you to configure commonly used sessions so that they can
+be renewed quickly in the case of the Tmux server terminating.
+&lt;/p&gt;
+
+&lt;h2 class=&quot;section-heading&quot;&gt;Example Configurations&lt;/h2&gt;
+
+&lt;p&gt;
+Simple configurations can go a long way. Here&#39;s an example of how I might configure a note taking session if I was invested in both Python and
+Java.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+name: notes
+root: ~/Documents/Notes/
+windows:
+  - python:
+      root: ~/Documents/Notes/Python
+      layout: f98d,230x59,0,0[230x40,0,0,0,230x18,0,41,4]
+      panes:
+        - vim
+        - python
+  - java: cd Java; vim
+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+This snippet creates two windows. One, Python, opens a vertical split of Vim and the Python interpreter for testing bits of code. The other
+simply moves to the Java directory and opens Vim to start taking notes.
+&lt;/p&gt;
+
+&lt;p&gt;
+Layouts can be any of the 5 that come preconfigured or any that you create yourself. The system is highly configurable. 
+&lt;/p&gt;
+
+&lt;p&gt;
+Configurations can be as customized and specific as you&#39;d like -- meaning sessions can be saved and restored with ease.
+&lt;/p&gt;
+
+&lt;h2 id=&quot;for-those-of-you-looking-for-a-tmux-refresher&quot;&gt;For those of you looking for a Tmux refresher&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/MohamedAlaa/2961058&quot;&gt;Cheatsheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://robots.thoughtbot.com/a-tmux-crash-course&quot;&gt;Crash Course&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer/&quot;&gt;Tmux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 18 Jul 2015 23:10:00 -0400</pubDate>
+        <link>http://bencarothers.me/2015/07/18/Saving-Session-Configurations-With-Tmux/</link>
+        <guid isPermaLink="true">http://bencarothers.me/2015/07/18/Saving-Session-Configurations-With-Tmux/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Comprehensions in Python</title>

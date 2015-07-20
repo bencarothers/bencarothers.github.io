@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
 
-    <title>Comprehensions in Python - Ben Carothers</title>
+    <title>Reviving Killed Tmux Sessions - Ben Carothers</title>
 
-    <link rel="canonical" href="http://bencarothers.me/2015/07/16/Comprehensions-In-Python/">
+    <link rel="canonical" href="http://bencarothers.me/2015/07/18/Saving-Session-Configurations-With-Tmux/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -78,16 +78,16 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/python.jpg')">
+<header class="intro-header" style="background-image: url('/img/foot.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Comprehensions in Python</h1>
+                    <h1>Reviving Killed Tmux Sessions</h1>
                     
-                    <h2 class="subheading">A Baby Step Toward Pythonic Code</h2>
+                    <h2 class="subheading">Using Tmuxinator To Save Your Configurations</h2>
                     
-                    <span class="meta">Posted by Ben Carothers on July 16, 2015</span>
+                    <span class="meta">Posted by Ben Carothers on July 18, 2015</span>
                 </div>
             </div>
         </div>
@@ -101,62 +101,63 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
 				<p>
-Python is a really elegantly constructed language that comes packaged with a large library of natural, powerful features. 
-I see the language constantly bombarded with criticisms that largely seem to be coming from developers that fail to adopt
-a pythonic style of code.
+Tmux has become an integral part of my workflow during the past couple of months.
+Keeping sessions configured and running keeps my work organized by delegating windows and panes to specific tasks.
 </p>
 
 <p>
-The for loop is one of the first learned and most used snippets of code for any new language. Python is no exception to this
-fact
+One problem I've encountered, however, is that I don't like to keep my machine running constantly, so every time I shutdown
+I lose meticulously configured sessions. This is pretty annoying because I seldom work on project for only a single day.
 </p>
-
-<pre><code class="language-python">numbers = [1,2,3]
-numbers_squared = []
-for number in numbers:
-    number **= 2
-    numbers_squared.append(number)
-</code></pre>
 
 <p>
-Here we have a list of 3 numbers. All we're looking to do is take each and square it, so that numbers becomes a list of each of its
-elements squared. So what's wrong with this code? Functionally, nothing. We end up with numbers_squared and can carry on with whatever
-task we we're initially trying to tackle. But is this idiomatic, pythonic code? Not quite.
+For instance, I like to keep a session for note taking and studying, which I use for an entire semester, and having to configure windows and panes 
+repeatedly completely destroys the benefits I gain from this system.
+</p>
+<p>
+Luckily, there's a widely available project called Tmuxinator that allows you to configure commonly used sessions so that they can
+be renewed quickly in the case of the Tmux server terminating.
 </p>
 
-<h2 class="section-heading">Comprehensions</h2>
+<h2 class="section-heading">Example Configurations</h2>
 
 <p>
-List comprehensions are a super easy way to make your code much more readable, cleaner and more efficient. They're simple and powerful 
-and, personally, I think they should be taught right along with for loops.
+Simple configurations can go a long way. Here's an example of how I might configure a note taking session if I was invested in both Python and
+Java.
 </p>
 
-<p>So, how could we accomplish the same functionality using comprehensions?</p>
-
-<pre><code class="language-python">numbers = [1,2,3]
-numbers_squared = [number**2 for number in numbers]
-</code></pre>
-
-<p>Four lines are quickly condensed to one and the code is both more beautiful and also more readable.</p>
-
-<p>Similarly we could do a few more involved operations</p>
-
-<pre><code class="language-python">numbers = [1,2,3]
-numbers_exponentiated = [[number**2,number**3,number**4] for number in numbers]
-</code></pre>
+<p><code>
+name: notes
+root: ~/Documents/Notes/
+windows:
+  - python:
+      root: ~/Documents/Notes/Python
+      layout: f98d,230x59,0,0[230x40,0,0,0,230x18,0,41,4]
+      panes:
+        - vim
+        - python
+  - java: cd Java; vim
+</code></p>
+<p>
+This snippet creates two windows. One, Python, opens a vertical split of Vim and the Python interpreter for testing bits of code. The other
+simply moves to the Java directory and opens Vim to start taking notes.
+</p>
 
 <p>
-Comprehensions also can be nested or used to construct dictionaries. Here we're creating a dictionary with the numbers as keys and 
-squares as values:
+Layouts can be any of the 5 that come preconfigured or any that you create yourself. The system is highly configurable. 
 </p>
-
-<pre><code class="language-python">numbers = [1,2,3]
-numbers_squared = {number:number**2 for number in numbers}
-</code></pre>
 
 <p>
-Python is really well constructed and full of features so don't knock it too hard before you do a little bit of exploring.
+Configurations can be as customized and specific as you'd like -- meaning sessions can be saved and restored with ease.
 </p>
+
+<h2 id="for-those-of-you-looking-for-a-tmux-refresher">For those of you looking for a Tmux refresher</h2>
+
+<ul>
+  <li><a href="https://gist.github.com/MohamedAlaa/2961058">Cheatsheet</a></li>
+  <li><a href="https://robots.thoughtbot.com/a-tmux-crash-course">Crash Course</a></li>
+  <li><a href="http://blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer/">Tmux</a></li>
+</ul>
 
 
 
@@ -165,13 +166,9 @@ Python is really well constructed and full of features so don't knock it too har
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2015/07/15/Regex-For-The-Masses/" data-toggle="tooltip" data-placement="top" title="Regex For The Masses">&larr; Previous Post</a>
+                        <a href="/2015/07/16/Comprehensions-In-Python/" data-toggle="tooltip" data-placement="top" title="Comprehensions in Python">&larr; Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2015/07/18/Saving-Session-Configurations-With-Tmux/" data-toggle="tooltip" data-placement="top" title="Reviving Killed Tmux Sessions">Next Post &rarr;</a>
-                    </li>
                     
                 </ul>
 
