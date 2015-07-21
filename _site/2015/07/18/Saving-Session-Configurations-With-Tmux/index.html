@@ -12,6 +12,26 @@
 
     <link rel="canonical" href="http://bencarothers.me/2015/07/18/Saving-Session-Configurations-With-Tmux/">
 
+    <!-- Favicon -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="image/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="image/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="image/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="image/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="image/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="image/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="image/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="image/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="image/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="image/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="image/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
@@ -106,28 +126,28 @@ Keeping sessions configured and running keeps my work organized by delegating wi
 </p>
 
 <p>
-One problem I've encountered, however, is that I don't like to keep my machine running constantly, so every time I shutdown
-I lose meticulously configured sessions. This is pretty annoying because I seldom work on project for only a single day.
+I'm not a huge fan of leaving my machine running -- for the reasons of both hardware and productivity preservation.
+Every time I shutdown I would lose my sessions, which was pretty annoying because its not often that I'm finished with
+a working environment after a single burst of working.
 </p>
 
 <p>
-For instance, I like to keep a session for note taking and studying, which I use for an entire semester, and having to configure windows and panes 
-repeatedly completely destroys the benefits I gain from this system.
+For instance, I like to keep a session for note taking and studying, which I use for an entire semester, and having to
+configure windows and panes repeatedly completely destroys the benefits I gain from this system.
 </p>
 <p>
-Luckily, there's a widely available project called Tmuxinator that allows you to configure commonly used sessions so that they can
-be renewed quickly in the case of the Tmux server terminating.
+Luckily, there's a widely available project called Tmuxinator that allows you to script and configure commonly used
+sessions so that they can be renewed quickly in the case of the Tmux server terminating.
 </p>
 
 <h2 class="section-heading">Example Configurations</h2>
 
 <p>
-Simple configurations can go a long way. Here's an example of how I might configure a note taking session if I was invested in both Python and
-Java.
+Simple configurations can go a long way. Here's an example of how I might configure a note taking session if I was invested
+in learning both Python and Java.
 </p>
 
-<p><code>
-name: notes
+<pre><code>name: notes
 root: ~/Documents/Notes/
 windows:
   - python:
@@ -137,18 +157,25 @@ windows:
         - vim
         - python
   - java: cd Java; vim
-</code></p>
+</code></pre>
+
 <p>
 This snippet creates two windows. One, Python, opens a vertical split of Vim and the Python interpreter for testing bits of code. The other
 simply moves to the Java directory and opens Vim to start taking notes.
 </p>
 
+<p><img src="/img/tmuxWin.jpg" alt="Here's the Python window" /></p>
+
 <p>
-Layouts can be any of the 5 that come preconfigured or any that you create yourself. The system is highly configurable. 
+A few window layouts ship with Tmuxinator, but you're open to create as many as you'd like. The system is highly configurable. 
 </p>
 
 <p>
 Configurations can be as customized and specific as you'd like -- meaning sessions can be saved and restored with ease.
+</p>
+
+<p>
+Note, in the case of a sessions accidental death, Tmuxinator will be little help to revive lost data.
 </p>
 
 <h2 id="for-those-of-you-looking-for-a-tmux-refresher">For those of you looking for a Tmux refresher</h2>
@@ -178,6 +205,9 @@ Configurations can be as customized and specific as you'd like -- meaning sessio
 </article>
 
 <hr>
+
+
+    
 
 
     <!-- Footer -->
@@ -239,6 +269,18 @@ Configurations can be as customized and specific as you'd like -- meaning sessio
 
 <!-- Custom Theme JavaScript -->
 <script src="/js/clean-blog.min.js "></script>
+
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65423611-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 
 </body>
