@@ -123,7 +123,7 @@
 				<h1 id="ive-fallen-for-python">I’ve Fallen For Python.</h1>
 
 <p>It’s no secret that I’m a fan of the language.
-Python has become my go to too for small weekend projects and my assignments at school – especially
+Python has become my go to for small weekend projects and my assignments for school – especially
 in cases where the scope and complexity of the problem isn’t necessarily a limiting factor.</p>
 
 <p>it’s fun to use, the code generally ends up being clean and concise,
@@ -136,10 +136,10 @@ that have made working in the language both more pleasant and also productive.</
 
 <h2 id="pyenv-and--virtualenv">Pyenv and  Virtualenv</h2>
 
-<p>Dealing with different versions of Python and also different versions of packages
-within these versions can be frustrating. If you work in Python for very long
+<p>Dealing with different versions of Python is hard. workin with different versions of packages
+within these versions is harder. If you work in Python for very long
 without using virtual environments you’ll undoubtedly end up with some conflicting 
-versions and a lengthy output from pip freeze.</p>
+versions and a lengthy output from <code>pip freeze</code>.</p>
 
 <p>I’ve recognized the benefits of virtual environments for awhile, but I could never
 commit to using them regularly because it always felt so clunky. Since the projects 
@@ -153,23 +153,23 @@ you can assign a version of Python to any specific directory.</p>
 <p>By then using the plugin Pyenv-virtualenv you can create virtual environments for 
 specific projects using the installed version. For instance, I can create a 
 virtual environment for my blog by typing <code>pyenv virtualenv 2.7.9 blog</code>. Then 
-any packages I install will only exist in blog once I type pyenv activate blog.</p>
+by typing <code>type pyenv activate blog</code> any packages I install will only exist in <code>blog</code>.</p>
 
 <p>Encapsulating environments makes testing and coordinating with other team members
-much easier.</p>
+much easier, and keeps your system organized and free of conflict.</p>
 
 <h2 id="setuptools-and-travis">Setuptools and Travis</h2>
 
 <p>I’ve also been using Travis as a contiuous integration service. As you’re developing
-something is going to break, and it won’t always be something that you’re expecting.
-In fact you usally won’t expect it at all.</p>
+something is going to break, and it won’t always be something that you’re expecting to.
+In fact, you usally won’t expect it at all.</p>
 
-<p>Using Setuptools you can create a setup.py file used to create a distrubtable and
+<p>Using Setuptools you can create a setup.py file used to create a distrubtable to 
 run the tests-suite after locating and downloading all the dependencies.</p>
 
 <p>Then you can register your Github repository with Travis, create a small .yaml file
 that builds your project and tests it every time you push code. This has been
-wonderful because the functionality youre working on isn’t always 
+wonderful because the functionality you’re working on isn’t always 
 what breaks, so you know where to look without having to manually run your tests.
 It often tells me there’s a bug long before I would’ve noticed it during development.</p>
 
@@ -259,7 +259,6 @@ Check them out here for more info:</p>
                             </span>
                         </a>
                     </li>
-                    
                     
                     
                     <li>
