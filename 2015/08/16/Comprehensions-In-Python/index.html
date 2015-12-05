@@ -98,7 +98,7 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/python.jpg')">
+<header class="intro-header" style="background-image: url('/img/comprehensions-in-python.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -120,16 +120,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>
-Python is a really elegantly constructed language that comes packaged with a large library of natural, powerful features. 
+				<p>Python is a really elegantly constructed language that comes packaged with a large library of natural, powerful features. 
 I see the language constantly bombarded with criticisms that largely seem to be coming from developers that fail to adopt
-a pythonic style of code.
-</p>
+a pythonic style of code.</p>
 
-<p>
-The for loop is one of the first learned and most used snippets of code for any new language. Python is no exception to this
-fact
-</p>
+<p>The for loop is one of the first learned and most used snippets of code for any new language. Python is no exception to this
+fact</p>
 
 <pre><code class="language-python">numbers = [1,2,3]
 numbers_squared = []
@@ -138,18 +134,14 @@ for number in numbers:
     numbers_squared.append(number)
 </code></pre>
 
-<p>
-Here we have a list of 3 numbers. All we're looking to do is take each and square it, so that numbers becomes a list of each of its
-elements squared. So what's wrong with this code? Functionally, nothing. We end up with numbers_squared and can carry on with whatever
-task we we're initially trying to tackle. But is this idiomatic, pythonic code? Not quite.
-</p>
+<p>Here we have a list of 3 numbers. All we’re looking to do is take each and square it, so that numbers becomes a list of each of its
+elements squared. So what’s wrong with this code? Functionally, nothing. We end up with numbers_squared and can carry on with whatever
+task we we’re initially trying to tackle. But is this idiomatic, pythonic code? Not quite.</p>
 
-<h2 class="section-heading">Comprehensions</h2>
+<h2 id="comprehensions">Comprehensions</h2>
 
-<p>
-List comprehensions are a super easy way to make your code much more readable, cleaner and more efficient. They're simple and powerful 
-and, personally, I think they should be taught right along with for loops.
-</p>
+<p>List comprehensions are a super easy way to make your code much more readable, cleaner and more efficient. They’re simple and powerful 
+and, personally, I think they should be taught right along with for loops.</p>
 
 <p>So, how could we accomplish the same functionality using comprehensions?</p>
 
@@ -165,18 +157,14 @@ numbers_squared = [number**2 for number in numbers]
 numbers_exponentiated = [[number**2,number**3,number**4] for number in numbers]
 </code></pre>
 
-<p>
-Comprehensions also can be nested or used to construct dictionaries. Here we're creating a dictionary with the numbers as keys and 
-squares as values:
-</p>
+<p>Comprehensions also can be nested or used to construct dictionaries. Here we’re creating a dictionary with the numbers as keys and 
+squares as values:</p>
 
 <pre><code class="language-python">numbers = [1,2,3]
 numbers_squared = {number:number**2 for number in numbers}
 </code></pre>
 
-<p>
-Python is really well constructed and full of features so don't knock it too hard before you do a little bit of exploring.
-</p>
+<p>Python is really well constructed and full of features so don’t knock it too hard before you do a little bit of exploring.</p>
 
 
 

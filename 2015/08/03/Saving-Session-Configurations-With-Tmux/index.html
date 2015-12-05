@@ -98,7 +98,7 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/foot.jpg')">
+<header class="intro-header" style="background-image: url('/img/reviving-killed-tmux-sessions.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -120,32 +120,25 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>
-Tmux has become an integral part of my workflow during the past couple of months.
-Keeping sessions configured and running keeps my work organized by delegating windows and panes to specific tasks.
-</p>
+				<h1 id="tmuxinator">Tmuxinator</h1>
 
-<p>
-I'm not a huge fan of leaving my machine running -- for the reasons of both hardware and productivity preservation.
-Every time I shutdown I would lose my sessions, which was pretty annoying because its not often that I'm finished with
-a working environment after a single burst of working.
-</p>
+<p>Tmux has become an integral part of my workflow during the past couple of months.
+Keeping sessions configured and running keeps my work organized by delegating windows and panes to specific tasks.</p>
 
-<p>
-For instance, I like to keep a session for note taking and studying, which I use for an entire semester, and having to
-configure windows and panes repeatedly completely destroys the benefits I gain from this system.
-</p>
-<p>
-Luckily, there's a widely available project called Tmuxinator that allows you to script and configure commonly used
-sessions so that they can be renewed quickly in the case of the Tmux server terminating.
-</p>
+<p>I’m not a huge fan of leaving my machine running – for the reasons of both hardware and productivity preservation.
+Every time I shutdown I would lose my sessions, which was pretty annoying because its not often that I’m finished with
+a working environment after a single burst of working.</p>
 
-<h2 class="section-heading">Example Configurations</h2>
+<p>For instance, I like to keep a session for note taking and studying, which I use for an entire semester, and having to
+configure windows and panes repeatedly completely destroys the benefits I gain from this system.</p>
 
-<p>
-Simple configurations can go a long way. Here's an example of how I might configure a note taking session if I was invested
-in learning both Python and Java.
-</p>
+<p>Luckily, there’s a widely available project called Tmuxinator that allows you to script and configure commonly used
+sessions so that they can be renewed quickly in the case of the Tmux server terminating.</p>
+
+<p>Example Configurations</p>
+
+<p>Simple configurations can go a long way. Here’s an example of how I might configure a note taking session if I was invested
+in learning both Python and Java.</p>
 
 <pre><code>name: notes
 root: ~/Documents/Notes/
@@ -159,24 +152,16 @@ windows:
   - java: cd Java; vim
 </code></pre>
 
-<p>
-This snippet creates two windows. One, Python, opens a vertical split of Vim and the Python interpreter for testing bits of code. The other
-simply moves to the Java directory and opens Vim to start taking notes.
-</p>
+<p>This snippet creates two windows. One, Python, opens a vertical split of Vim and the Python interpreter for testing bits of code. The other
+simply moves to the Java directory and opens Vim to start taking notes.</p>
 
 <p><img src="/img/tmuxWin.jpg" alt="Here's the Python window" /></p>
 
-<p>
-A few window layouts ship with Tmuxinator, but you're open to create as many as you'd like. The system is highly configurable. 
-</p>
+<p>A few window layouts ship with Tmuxinator, but you’re open to create as many as you’d like. The system is highly configurable.</p>
 
-<p>
-Configurations can be as customized and specific as you'd like -- meaning sessions can be saved and restored with ease.
-</p>
+<p>Configurations can be as customized and specific as you’d like – meaning sessions can be saved and restored with ease.</p>
 
-<p>
-Note, in the case of a sessions accidental death, Tmuxinator will be little help to revive lost data.
-</p>
+<p>Note, in the case of a sessions accidental death, Tmuxinator will be little help to revive lost data.</p>
 
 <h2 id="for-those-of-you-looking-for-a-tmux-refresher">For those of you looking for a Tmux refresher</h2>
 

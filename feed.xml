@@ -5,9 +5,96 @@
     <description></description>
     <link>http://bencarothers.me/</link>
     <atom:link href="http://bencarothers.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 02 Dec 2015 11:28:19 -0500</pubDate>
-    <lastBuildDate>Wed, 02 Dec 2015 11:28:19 -0500</lastBuildDate>
+    <pubDate>Fri, 04 Dec 2015 21:52:30 -0500</pubDate>
+    <lastBuildDate>Fri, 04 Dec 2015 21:52:30 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Effective Commits</title>
+        <description>&lt;h1 id=&quot;effective-commits&quot;&gt;Effective Commits&lt;/h1&gt;
+
+&lt;p&gt;You’re already using git. We all know how crucial it is to keep track of our 
+changes – version control is a tool that any successful developer is going
+to need to know how to use.&lt;/p&gt;
+
+&lt;p&gt;We all agree on this, so why can’t we all agree 
+on common style for commits.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-problem&quot;&gt;The Problem&lt;/h2&gt;
+
+&lt;p&gt;Maybe you’ve seen a &lt;code&gt;git log&lt;/code&gt; that looks something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Tue Jun 2 02:29:52 2015 f324153 next attempt
+
+Tue Jun 2 02:27:30 2015 1567ca2 plz work
+
+Tue Jun 2 01:42:41 2015 87d2418 trying something new
+
+Tue Jun 2 01:08:35 2015 97dc4aa bug fix
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This record is not helpful at all.
+The only thing that we learn from this exchange is that this developer was
+having a rough night. We don’t learn what was wrong, what they tried,
+what worked, and how to avoid what didn’t. There’s nothing to keep someone else,
+or even the same person, from getting stuck on the same problem.&lt;/p&gt;
+
+&lt;h2 id=&quot;so-how-do-we-fix-this&quot;&gt;So how do we fix this.&lt;/h2&gt;
+
+&lt;p&gt;There are a couple things you can do to keep yourself accountable.&lt;/p&gt;
+
+&lt;p&gt;If you’re using git from the command line you can create two files used to
+remind yourself of what you want to include in your commits.&lt;/p&gt;
+
+&lt;p&gt;The first is a file called .gitconfig. This file exists in you home directory.
+It can specify a lot of your git prefrences – including, but not limited to, 
+something called a template. this can be defined as such:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[commit]
+  template = ~/.gitmessage
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the .gitmessage file we can leave comments that give us hints as to what
+sort of information is useful and in what format should we leave it.
+Here’s an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# 50-character subject line
+#
+# * Why did you make this commit?
+# * What problem does it address?
+# * Are there any side effects?
+# * Is there a reference link to the problem or solution?
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;what-does-this-accomplish&quot;&gt;What does this accomplish&lt;/h2&gt;
+
+&lt;p&gt;Firstly the subject line gives as a succinct summary of the change made.
+Given the 50-character length these messages will appear in &lt;code&gt;git log&lt;/code&gt; 
+and also on Github.&lt;/p&gt;
+
+&lt;p&gt;Then we have a few questions that when answered would give a developer looking 
+over these commits a clear understanding of why a change was made, if it 
+fixed a problem, and if it messed anything up.&lt;/p&gt;
+
+&lt;p&gt;It also gives a location where someone new might be able to find more
+information. Notice this message also addresses a single change – this is crucial.
+Grouping features into a single commit makes figuring out where something went
+wrong and reverting to the most recent working version quick and efficient.&lt;/p&gt;
+
+&lt;p&gt;Using techniques like these you can make your life, and the live’s of the people
+with which you collaborate, much easier. The few mentioned tweaks are things that
+I use, but to really get the most from your commit messages you should conform 
+to some agreed upon style guide. As I mentioned before there is no agreed upon
+standard, so working with something that your whole team understands will be
+the most rewarding.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 04 Dec 2015 02:10:00 -0500</pubDate>
+        <link>http://bencarothers.me/2015/12/04/Effective-Commits/</link>
+        <guid isPermaLink="true">http://bencarothers.me/2015/12/04/Effective-Commits/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Productive Python</title>
@@ -98,16 +185,12 @@ Check them out here for more info:&lt;/p&gt;
     
       <item>
         <title>Comprehensions in Python</title>
-        <description>&lt;p&gt;
-Python is a really elegantly constructed language that comes packaged with a large library of natural, powerful features. 
+        <description>&lt;p&gt;Python is a really elegantly constructed language that comes packaged with a large library of natural, powerful features. 
 I see the language constantly bombarded with criticisms that largely seem to be coming from developers that fail to adopt
-a pythonic style of code.
-&lt;/p&gt;
+a pythonic style of code.&lt;/p&gt;
 
-&lt;p&gt;
-The for loop is one of the first learned and most used snippets of code for any new language. Python is no exception to this
-fact
-&lt;/p&gt;
+&lt;p&gt;The for loop is one of the first learned and most used snippets of code for any new language. Python is no exception to this
+fact&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;numbers = [1,2,3]
 numbers_squared = []
@@ -116,18 +199,14 @@ for number in numbers:
     numbers_squared.append(number)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;
-Here we have a list of 3 numbers. All we&#39;re looking to do is take each and square it, so that numbers becomes a list of each of its
-elements squared. So what&#39;s wrong with this code? Functionally, nothing. We end up with numbers_squared and can carry on with whatever
-task we we&#39;re initially trying to tackle. But is this idiomatic, pythonic code? Not quite.
-&lt;/p&gt;
+&lt;p&gt;Here we have a list of 3 numbers. All we’re looking to do is take each and square it, so that numbers becomes a list of each of its
+elements squared. So what’s wrong with this code? Functionally, nothing. We end up with numbers_squared and can carry on with whatever
+task we we’re initially trying to tackle. But is this idiomatic, pythonic code? Not quite.&lt;/p&gt;
 
-&lt;h2 class=&quot;section-heading&quot;&gt;Comprehensions&lt;/h2&gt;
+&lt;h2 id=&quot;comprehensions&quot;&gt;Comprehensions&lt;/h2&gt;
 
-&lt;p&gt;
-List comprehensions are a super easy way to make your code much more readable, cleaner and more efficient. They&#39;re simple and powerful 
-and, personally, I think they should be taught right along with for loops.
-&lt;/p&gt;
+&lt;p&gt;List comprehensions are a super easy way to make your code much more readable, cleaner and more efficient. They’re simple and powerful 
+and, personally, I think they should be taught right along with for loops.&lt;/p&gt;
 
 &lt;p&gt;So, how could we accomplish the same functionality using comprehensions?&lt;/p&gt;
 
@@ -143,18 +222,14 @@ numbers_squared = [number**2 for number in numbers]
 numbers_exponentiated = [[number**2,number**3,number**4] for number in numbers]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;
-Comprehensions also can be nested or used to construct dictionaries. Here we&#39;re creating a dictionary with the numbers as keys and 
-squares as values:
-&lt;/p&gt;
+&lt;p&gt;Comprehensions also can be nested or used to construct dictionaries. Here we’re creating a dictionary with the numbers as keys and 
+squares as values:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;numbers = [1,2,3]
 numbers_squared = {number:number**2 for number in numbers}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;
-Python is really well constructed and full of features so don&#39;t knock it too hard before you do a little bit of exploring.
-&lt;/p&gt;
+&lt;p&gt;Python is really well constructed and full of features so don’t knock it too hard before you do a little bit of exploring.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 16 Aug 2015 23:10:00 -0400</pubDate>
@@ -166,32 +241,25 @@ Python is really well constructed and full of features so don&#39;t knock it too
     
       <item>
         <title>Reviving Killed Tmux Sessions</title>
-        <description>&lt;p&gt;
-Tmux has become an integral part of my workflow during the past couple of months.
-Keeping sessions configured and running keeps my work organized by delegating windows and panes to specific tasks.
-&lt;/p&gt;
+        <description>&lt;h1 id=&quot;tmuxinator&quot;&gt;Tmuxinator&lt;/h1&gt;
 
-&lt;p&gt;
-I&#39;m not a huge fan of leaving my machine running -- for the reasons of both hardware and productivity preservation.
-Every time I shutdown I would lose my sessions, which was pretty annoying because its not often that I&#39;m finished with
-a working environment after a single burst of working.
-&lt;/p&gt;
+&lt;p&gt;Tmux has become an integral part of my workflow during the past couple of months.
+Keeping sessions configured and running keeps my work organized by delegating windows and panes to specific tasks.&lt;/p&gt;
 
-&lt;p&gt;
-For instance, I like to keep a session for note taking and studying, which I use for an entire semester, and having to
-configure windows and panes repeatedly completely destroys the benefits I gain from this system.
-&lt;/p&gt;
-&lt;p&gt;
-Luckily, there&#39;s a widely available project called Tmuxinator that allows you to script and configure commonly used
-sessions so that they can be renewed quickly in the case of the Tmux server terminating.
-&lt;/p&gt;
+&lt;p&gt;I’m not a huge fan of leaving my machine running – for the reasons of both hardware and productivity preservation.
+Every time I shutdown I would lose my sessions, which was pretty annoying because its not often that I’m finished with
+a working environment after a single burst of working.&lt;/p&gt;
 
-&lt;h2 class=&quot;section-heading&quot;&gt;Example Configurations&lt;/h2&gt;
+&lt;p&gt;For instance, I like to keep a session for note taking and studying, which I use for an entire semester, and having to
+configure windows and panes repeatedly completely destroys the benefits I gain from this system.&lt;/p&gt;
 
-&lt;p&gt;
-Simple configurations can go a long way. Here&#39;s an example of how I might configure a note taking session if I was invested
-in learning both Python and Java.
-&lt;/p&gt;
+&lt;p&gt;Luckily, there’s a widely available project called Tmuxinator that allows you to script and configure commonly used
+sessions so that they can be renewed quickly in the case of the Tmux server terminating.&lt;/p&gt;
+
+&lt;p&gt;Example Configurations&lt;/p&gt;
+
+&lt;p&gt;Simple configurations can go a long way. Here’s an example of how I might configure a note taking session if I was invested
+in learning both Python and Java.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;name: notes
 root: ~/Documents/Notes/
@@ -205,24 +273,16 @@ windows:
   - java: cd Java; vim
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;
-This snippet creates two windows. One, Python, opens a vertical split of Vim and the Python interpreter for testing bits of code. The other
-simply moves to the Java directory and opens Vim to start taking notes.
-&lt;/p&gt;
+&lt;p&gt;This snippet creates two windows. One, Python, opens a vertical split of Vim and the Python interpreter for testing bits of code. The other
+simply moves to the Java directory and opens Vim to start taking notes.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/tmuxWin.jpg&quot; alt=&quot;Here&#39;s the Python window&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;
-A few window layouts ship with Tmuxinator, but you&#39;re open to create as many as you&#39;d like. The system is highly configurable. 
-&lt;/p&gt;
+&lt;p&gt;A few window layouts ship with Tmuxinator, but you’re open to create as many as you’d like. The system is highly configurable.&lt;/p&gt;
 
-&lt;p&gt;
-Configurations can be as customized and specific as you&#39;d like -- meaning sessions can be saved and restored with ease.
-&lt;/p&gt;
+&lt;p&gt;Configurations can be as customized and specific as you’d like – meaning sessions can be saved and restored with ease.&lt;/p&gt;
 
-&lt;p&gt;
-Note, in the case of a sessions accidental death, Tmuxinator will be little help to revive lost data.
-&lt;/p&gt;
+&lt;p&gt;Note, in the case of a sessions accidental death, Tmuxinator will be little help to revive lost data.&lt;/p&gt;
 
 &lt;h2 id=&quot;for-those-of-you-looking-for-a-tmux-refresher&quot;&gt;For those of you looking for a Tmux refresher&lt;/h2&gt;
 
@@ -242,27 +302,21 @@ Note, in the case of a sessions accidental death, Tmuxinator will be little help
     
       <item>
         <title>Regex For The Masses</title>
-        <description>&lt;p&gt;
-Regular expressions, sequences of characters that define patterns, are widely applicable and strangely controversial.
-They can definitely be fickle and buggy. Often because they&#39;re so terse and condensed regular expressions are 
-less readable than equivalent counterparts. However, they&#39;re a fundamental aspect of modern software and
-for that reason alone simple regular expressions are a crucial part of any developers skill base.
-&lt;/p&gt;
+        <description>&lt;p&gt;Regular expressions, sequences of characters that define patterns, are widely applicable and strangely controversial.
+They can definitely be fickle and buggy. Often because they’re so terse and condensed regular expressions are 
+less readable than equivalent counterparts. However, they’re a fundamental aspect of modern software and
+for that reason alone simple regular expressions are a crucial part of any developers skill base.&lt;/p&gt;
 
-&lt;h2 class=&quot;section-heading&quot;&gt;Everyone Searches.&lt;/h2&gt;
+&lt;h2 id=&quot;everyone-searches&quot;&gt;Everyone Searches.&lt;/h2&gt;
 
-&lt;p&gt;
-Cory Doctorow once wrote that regular expressions should be included as a core part of our education -- along side
-word processors and PowerPoint. Though I want to stress that I love regex, I think that this is a bogus.
-&lt;/p&gt;
+&lt;p&gt;Cory Doctorow once wrote that regular expressions should be included as a core part of our education – along side
+word processors and PowerPoint. Though I want to stress that I love regex, I think that this is a bogus.&lt;/p&gt;
 
-&lt;p&gt;
-Foundationally, computer programs are built around the foundation of manipulating characters -- searching, matching,
+&lt;p&gt;Foundationally, computer programs are built around the foundation of manipulating characters – searching, matching,
 and acting according to what was found. For this reason a tool such as regular expressions can be invaluable for 
-developers, but the time spent learning and creating regex might outweigh the benefits for your average searcher.
-&lt;/p&gt;
+developers, but the time spent learning and creating regex might outweigh the benefits for your average searcher.&lt;/p&gt;
 
-&lt;h2 class=&quot;section-heading&quot;&gt;Daily Use&lt;/h2&gt;
+&lt;h2 id=&quot;daily-use&quot;&gt;Daily Use&lt;/h2&gt;
 
 &lt;h4 id=&quot;matching-an-email&quot;&gt;Matching an Email&lt;/h4&gt;
 
@@ -270,21 +324,15 @@ developers, but the time spent learning and creating regex might outweigh the be
 ^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$
 &lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;
-There&#39;s a lot of controversy about the correct regex for matching an email address, but there&#39;s no doubt that this could 
-be useful for anyone. Searching a document for multiple addresses could be done instantly.
-&lt;/p&gt;
+&lt;p&gt;There’s a lot of controversy about the correct regex for matching an email address, but there’s no doubt that this could 
+be useful for anyone. Searching a document for multiple addresses could be done instantly.&lt;/p&gt;
 
-&lt;p&gt;
-As for the make up of the pattern: 
+&lt;p&gt;As for the make up of the pattern: 
 First we look for any number of valid symbols followed by an @ symbol 
 then similarly any number of symbols followed by a period 
-and finally 2 to 6 characters
-&lt;/p&gt;
+and finally 2 to 6 characters&lt;/p&gt;
 
-&lt;p&gt;
-The trade off here between complexity and accuracy wouldn&#39;t be an issue for everyday usage.
-&lt;/p&gt;
+&lt;p&gt;The trade off here between complexity and accuracy wouldn’t be an issue for everyday usage.&lt;/p&gt;
 
 &lt;h4 id=&quot;matching-a-phone-number&quot;&gt;Matching a Phone Number:&lt;/h4&gt;
 
@@ -292,39 +340,27 @@ The trade off here between complexity and accuracy wouldn&#39;t be an issue for 
 ^[\d]{3,}$
 &lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;
-Much like matching emails finding phone numbers is another dead simple way that regex can be incredibly useful.
-This pattern is as simple as finding 3 or more digit 
-&lt;/p&gt;
+&lt;p&gt;Much like matching emails finding phone numbers is another dead simple way that regex can be incredibly useful.
+This pattern is as simple as finding 3 or more digit&lt;/p&gt;
 
-&lt;p&gt;
-This is a great example of a regex that is absolutely inefficient and inexact that would be perfectly ok for an
-average user looking for phone numbers.
-&lt;/p&gt;
+&lt;p&gt;This is a great example of a regex that is absolutely inefficient and inexact that would be perfectly ok for an
+average user looking for phone numbers.&lt;/p&gt;
 
-&lt;p&gt;
-Matching phone numbers can get incredibly complex which is exactly why I don&#39;t think non-developers need a super strong
-foundation in regular expressions, but rather the bare minimum
-&lt;/p&gt;
+&lt;p&gt;Matching phone numbers can get incredibly complex which is exactly why I don’t think non-developers need a super strong
+foundation in regular expressions, but rather the bare minimum&lt;/p&gt;
 
 &lt;h4 id=&quot;matching-white-space&quot;&gt;Matching White Space:&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;
- [^\S\r\n]{2,}
+[^\S\r\n]{2,}
 &lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;
-Here is a pattern that eliminates some of the frustrations in cleaning up text documents.
-&lt;/p&gt;
+&lt;p&gt;Here is a pattern that eliminates some of the frustrations in cleaning up text documents.&lt;/p&gt;
 
-&lt;p&gt;
-Simply match 2 or more white space characters and then replace them with one. 
-Dead simple and really useful.
-&lt;/p&gt;
+&lt;p&gt;Simply match 2 or more white space characters and then replace them with one. 
+Dead simple and really useful.&lt;/p&gt;
 
-&lt;p&gt;
-Regular Expressions are everywhere. I think they&#39;re useful for everyone -- probably more so for nerds.
-&lt;/p&gt;
+&lt;p&gt;Regular Expressions are everywhere. I think they’re useful for everyone – probably more so for nerds.&lt;/p&gt;
 </description>
         <pubDate>Fri, 24 Jul 2015 23:00:00 -0400</pubDate>
         <link>http://bencarothers.me/2015/07/24/Regex-For-The-Masses/</link>
@@ -335,63 +371,44 @@ Regular Expressions are everywhere. I think they&#39;re useful for everyone -- p
     
       <item>
         <title>Gardening with Pi</title>
-        <description>&lt;p&gt;
-I love gardening for so many reasons -- good food, pretty landscaping, and a reason to get up and take a break from my work.
-Though, Living in suburban Southern Florida can make the process a little tougher than I think should be.
-&lt;/p&gt;
+        <description>&lt;h1 id=&quot;twipy&quot;&gt;Twipy&lt;/h1&gt;
 
-&lt;p&gt;
-Limited to a small patch of brick, I made some adjustments to the conventional home garden that make the process both less stressful
-and also a bit more sustainable.
-&lt;/p&gt;
+&lt;p&gt;I love gardening for so many reasons – good food, pretty landscaping, and a reason to get up and take a break from my work.
+Though, Living in suburban Southern Florida can make the process a little tougher than I think should be.&lt;/p&gt;
 
-&lt;p&gt;
-The sun is hot - Really, painfully hot - and vegetables don&#39;t grow in concrete. I started planning out a couple of raised
+&lt;p&gt;Limited to a small patch of brick, I made some adjustments to the conventional home garden that make the process both less stressful
+and also a bit more sustainable.&lt;/p&gt;
+
+&lt;p&gt;The sun is hot - Really, painfully hot - and vegetables don’t grow in concrete. I started planning out a couple of raised
 beds that would be far enough off the ground to so that they would be protected from the heat stored in the brick.
-I ended up with two four feet by two feet planters -- both with about six cubic feet of soil and sitting on three feet legs.
-I was set for my first growing season until I realized just how hot the sun in Florida really is.
-&lt;/p&gt;
+I ended up with two four feet by two feet planters – both with about six cubic feet of soil and sitting on three feet legs.
+I was set for my first growing season until I realized just how hot the sun in Florida really is.&lt;/p&gt;
 
-&lt;h2 class=&quot;section-heading&quot;&gt;Water, please.&lt;/h2&gt;
+&lt;h2 id=&quot;water-please&quot;&gt;Water, please.&lt;/h2&gt;
 
-&lt;p&gt;
-Keeping moisture levels optimal was becoming a full time endeavor -- especially because the soil was only 8 inches deep.
-I started researching watering practices in arid environments when I happened upon the practice of drip irrigation.
-&lt;/p&gt;
+&lt;p&gt;Keeping moisture levels optimal was becoming a full time endeavor – especially because the soil was only 8 inches deep.
+I started researching watering practices in arid environments when I happened upon the practice of drip irrigation.&lt;/p&gt;
 
-&lt;p&gt;
-Though the technique dates back thousands of years, today droplets of water are applied directly to the base of your plants
+&lt;p&gt;Though the technique dates back thousands of years, today droplets of water are applied directly to the base of your plants
 through lines of selectively perforated tubing. Coupled with a pressure regulator and filter this system of tubing is one of
 the most efficient systems of watering available. It was working really well, but I still needed to water every couple of hours,
-which was a problem when I was out of the house.
-&lt;/p&gt;
+which was a problem when I was out of the house.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;/img/drip.jpg&quot; alt=&quot;drip irrigation&quot; /&gt;
-&lt;/a&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;Lines of drip tubing&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/drip.jpg&quot; alt=&quot;Lines of drip tubing&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;
-This was when I came upon the Open Sprinkler Pi. This small micro-controller interfaces with a Raspberry Pi allowing it to control 
-common sprinkler valves.
-&lt;/p&gt;
+&lt;p&gt;This was when I came upon the Open Sprinkler Pi. This small micro-controller interfaces with a Raspberry Pi allowing it to control 
+common sprinkler valves.&lt;/p&gt;
 
-&lt;p&gt;
-The process was pretty simple. First flash an image provided by the Open Sprinkler to the Pi that comes with pre-installed programs
-to control your valves in any way imaginable. Then, connect the Pi to the OSPI and run the necessary wires to the valve -- I opted 
+&lt;p&gt;The process was pretty simple. First flash an image provided by the Open Sprinkler to the Pi that comes with pre-installed programs
+to control your valves in any way imaginable. Then, connect the Pi to the OSPI and run the necessary wires to the valve – I opted 
 for a drip valve simply because my drip system had already been put in place. Finally, whatever program you decide to use is available
-through port forwarding and your garden can be watered from anywhere with internet access. 
-&lt;/p&gt;
+through port forwarding and your garden can be watered from anywhere with internet access.&lt;/p&gt;
 
-&lt;p&gt;
-So far the system is working beautifully. I opted to write a program that scrapes a Twitter account and parses watering commands because
-, frankly, the applications provided had more features than I needed.  
-&lt;/p&gt;
+&lt;p&gt;So far the system is working beautifully. I opted to write a program that scrapes a Twitter account and parses watering commands because
+, frankly, the applications provided had more features than I needed.&lt;/p&gt;
 
-&lt;p&gt;
-I do still like to water manually so I can see how things are growing, but it&#39;s nice to be able to be away from home without having to
-worry about thirsty plants. Plus, the system is highly extensible so it leaves endless opportunity to explore in the future.
-&lt;/p&gt;
+&lt;p&gt;I do still like to water manually so I can see how things are growing, but it’s nice to be able to be away from home without having to
+worry about thirsty plants. Plus, the system is highly extensible so it leaves endless opportunity to explore in the future.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 13 Jul 2015 23:10:00 -0400</pubDate>
