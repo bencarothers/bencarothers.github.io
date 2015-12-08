@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
 
-    <title>Productive Python - Ben Carothers</title>
+    <title>Effective Commits - Ben Carothers</title>
 
-    <link rel="canonical" href="http://bencarothers.me/2015/12/01/Productive-Python/">
+    <link rel="canonical" href="http://bencarothers.me/2015/12/06/Effective-Commits/">
 
     <!-- Favicon -->
 
@@ -98,16 +98,16 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/productive-python.jpg')">
+<header class="intro-header" style="background-image: url('/img/effective-commits.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Productive Python</h1>
+                    <h1>Effective Commits</h1>
                     
-                    <h2 class="subheading">A few tools that keep me going</h2>
+                    <h2 class="subheading">The way commit messages should be</h2>
                     
-                    <span class="meta">Posted by Ben Carothers on December 1, 2015</span>
+                    <span class="meta">Posted by Ben Carothers on December 6, 2015</span>
                 </div>
             </div>
         </div>
@@ -120,83 +120,83 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<h1 id="ive-fallen-for-python">I’ve Fallen For Python.</h1>
+				<h1 id="effective-commits">Effective Commits</h1>
 
-<p>It’s no secret that I’m a fan of the language.
-Python has become my go to for small weekend projects and my assignments for school – especially
-in cases where the scope and complexity of the problem isn’t necessarily a limiting factor.</p>
+<p>You’re already using git. We all know how crucial it is to keep track of our 
+changes – version control is a tool that any successful developer is going
+to need to know how to use.</p>
 
-<p>It’s fun to use, the code generally ends up being clean and concise,
-and it’s really useful for fast, iterative development. Furthermore, the 
-huge number of awesome libraries make it possible to do nearly anything you’re 
-willing to research.</p>
+<p>We all agree on this, so why can’t we all agree 
+on common style for commits.</p>
 
-<p>I’ve recently come across a few tools that, not all necessarily linked to Python,
-have made working in the language both more pleasant and also productive.</p>
+<h2 id="the-problem">The Problem</h2>
 
-<h2 id="pyenv-and--virtualenv">Pyenv and  Virtualenv</h2>
+<p>Maybe you’ve seen a <code>git log</code> that looks something like this:</p>
 
-<p>Dealing with different versions of Python is hard. working with different versions of packages
-within these versions is harder. If you work in Python for very long
-without using virtual environments you’ll undoubtedly end up with some conflicting 
-versions and a lengthy output from <code>pip freeze</code>.</p>
+<pre><code>Tue Jun 2 02:29:52 2015 f324153 next attempt
 
-<p>I’ve recognized the benefits of virtual environments for a while, but I could never
-commit to using them regularly because it always felt so clunky. Since the projects 
-I’m currently involved in are using entirely different versions of Python I finally 
-commited to finding a set up that worked for me.</p>
+Tue Jun 2 02:27:30 2015 1567ca2 plz work
 
-<p>Pyenv is an awesome tool that lets you seemlessly download and switch between 
-different versions of Python. Furthermore, by issuing the command, <code>pyenv local /version/</code>,
-you can assign a version of Python to any specific directory.</p>
+Tue Jun 2 01:42:41 2015 87d2418 trying something new
 
-<p>By then using the plugin Pyenv-virtualenv you can create virtual environments for 
-specific projects using the installed version. For instance, I can create a 
-virtual environment for my blog by typing <code>pyenv virtualenv 2.7.9 blog</code>. Then 
-by typing <code>type pyenv activate blog</code> any packages I install will only exist in <code>blog</code>.</p>
+Tue Jun 2 01:08:35 2015 97dc4aa bug fix
+</code></pre>
 
-<p>Encapsulating environments makes testing and coordinating with other team members
-much easier, and keeps your system organized and free of conflict.</p>
+<p>This record is not helpful at all.
+The only thing that we learn from this exchange is that this developer was
+having a rough night. We don’t learn what was wrong, what they tried,
+what worked, and how to avoid what didn’t. There’s nothing to keep someone else,
+or even the same person, from getting stuck on the same problem.</p>
 
-<h2 id="setuptools-and-travis">Setuptools and Travis</h2>
+<h2 id="so-how-do-we-fix-this">So how do we fix this.</h2>
 
-<p>I’ve also been using Travis as a contiuous integration service. As you’re developing
-something is going to break, and it won’t always be something that you’re expecting.
-In fact, you usally won’t expect it at all.</p>
+<p>There are a couple things you can do to keep yourself accountable.</p>
 
-<p>Using Setuptools you can create a setup.py file used to create a distrubtable to 
-run the tests-suite after locating and downloading all the dependencies.</p>
+<p>If you’re using git from the command line you can create two files used to
+remind yourself of what you want to include in your commits.</p>
 
-<p>Then you can register your Github repository with Travis, create a small .yaml file
-that builds your project and tests it every time you push code. This has been
-wonderful because the functionality you’re working on isn’t always 
-what breaks, so you know where to look without having to manually run your tests.
-It often tells me there’s a bug long before I would’ve noticed it during development.</p>
+<p>The first is a file called .gitconfig. This file exists in you home directory.
+It can specify a lot of your git prefrences – including, but not limited to, 
+something called a template. this can be defined as such:</p>
 
-<h2 id="coveralls">Coveralls</h2>
+<pre><code>[commit]
+  template = ~/.gitmessage
+</code></pre>
 
-<p>Lastly, I’ve been using Coveralls.io with the package coverage and in cooperation
-with Travis to get an idea of where my tests aren’t reaching. Coveralls gives you 
-a line by line audit of you’re code showing you which parts are covered in your tests
-and where your code is bare.</p>
+<p>In the .gitmessage file we can leave comments that give us hints as to what
+sort of information is useful and in what format should we leave it.
+Here’s an example:</p>
 
-<p>Obviously, a high percentange doesn’t necessarily mean that every case is 
-handled, but the output does give you an idea of areas that could use some
-checks.</p>
+<pre><code># 50-character subject line
+#
+# * Why did you make this commit?
+# * What problem does it address?
+# * Are there any side effects?
+# * Is there a reference link to the problem or solution?
+</code></pre>
 
-<p>If nothing else the button on my README keeps me accountable, which is useful so that 
-I don’t code blindly for hours only to realize I’ve broken some core functionality.</p>
+<h2 id="what-does-this-accomplish">What does this accomplish</h2>
 
-<p>There are a ton of tools that make development more productive and fun. These are
-just a few of the ones that I’ve been using lately.
-Check them out here for more info:</p>
+<p>Firstly the subject line gives as a succinct summary of the change made.
+Given the 50-character length these messages will appear in <code>git log</code> 
+and also on Github.</p>
 
-<ul>
-  <li><a href="https://pythonhosted.org/setuptools/">Setuptools</a></li>
-  <li><a href="https://github.com/yyuu/pyenv">Pyenv</a></li>
-  <li><a href="https://travis-ci.org/">Travis</a></li>
-  <li><a href="https://coveralls.io/">Coveralls</a></li>
-</ul>
+<p>Then we have a few questions that when answered would give a developer looking 
+over these commits a clear understanding of why a change was made, if it 
+fixed a problem, and if it messed anything up.</p>
+
+<p>It also gives a location where someone new might be able to find more
+information. Notice this message also addresses a single change – this is crucial.
+Grouping features into a single commit makes figuring out where something went
+wrong and reverting to the most recent working version quick and efficient.</p>
+
+<p>Using techniques like these you can make your life, and the live’s of the people
+with which you collaborate, much easier. The few mentioned tweaks are things that
+I use, but to really get the most from your commit messages you should conform 
+to some agreed upon style guide. As I mentioned before there is no agreed upon
+standard, so working with something that your whole team understands will be
+the most rewarding.</p>
+
 
 
                 <hr>
@@ -204,13 +204,9 @@ Check them out here for more info:</p>
                 <!-- <ul class="pager"> -->
                 <!--      -->
                 <!--     <li class="previous"> -->
-                <!--         <a href="/2015/08/16/Comprehensions-In-Python/" data-toggle="tooltip" data-placement="top" title="Comprehensions in Python">&larr; Previous Post</a> -->
+                <!--         <a href="/2015/12/01/Productive-Python/" data-toggle="tooltip" data-placement="top" title="Productive Python">&larr; Previous Post</a> -->
                 <!--     </li> -->
                 <!--      -->
-                <!--      -->
-                <!--     <li class="next"> -->
-                <!--         <a href="/2015/12/06/Effective-Commits/" data-toggle="tooltip" data-placement="top" title="Effective Commits">Next Post &rarr;</a> -->
-                <!--     </li> -->
                 <!--      -->
                 <!-- </ul> -->
 
@@ -220,7 +216,7 @@ Check them out here for more info:</p>
 <script type="text/javascript">
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
   var disqus_shortname = 'bencarothers'; // required: replace example with your forum shortname
-  var disqus_identifier = "/2015/12/01/Productive-Python/";
+  var disqus_identifier = "/2015/12/06/Effective-Commits/";
 
   /* * * DON'T EDIT BELOW THIS LINE * * */
   (function() {

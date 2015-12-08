@@ -5,8 +5,8 @@
     <description></description>
     <link>http://bencarothers.me/</link>
     <atom:link href="http://bencarothers.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 04 Dec 2015 21:52:30 -0500</pubDate>
-    <lastBuildDate>Fri, 04 Dec 2015 21:52:30 -0500</lastBuildDate>
+    <pubDate>Tue, 08 Dec 2015 10:33:07 -0500</pubDate>
+    <lastBuildDate>Tue, 08 Dec 2015 10:33:07 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -89,9 +89,9 @@ standard, so working with something that your whole team understands will be
 the most rewarding.&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 04 Dec 2015 02:10:00 -0500</pubDate>
-        <link>http://bencarothers.me/2015/12/04/Effective-Commits/</link>
-        <guid isPermaLink="true">http://bencarothers.me/2015/12/04/Effective-Commits/</guid>
+        <pubDate>Sun, 06 Dec 2015 02:10:00 -0500</pubDate>
+        <link>http://bencarothers.me/2015/12/06/Effective-Commits/</link>
+        <guid isPermaLink="true">http://bencarothers.me/2015/12/06/Effective-Commits/</guid>
         
         
       </item>
@@ -104,22 +104,22 @@ the most rewarding.&lt;/p&gt;
 Python has become my go to for small weekend projects and my assignments for school – especially
 in cases where the scope and complexity of the problem isn’t necessarily a limiting factor.&lt;/p&gt;
 
-&lt;p&gt;it’s fun to use, the code generally ends up being clean and concise,
+&lt;p&gt;It’s fun to use, the code generally ends up being clean and concise,
 and it’s really useful for fast, iterative development. Furthermore, the 
-huge number of awesome libraries make it possible to do nearly anything your’re 
+huge number of awesome libraries make it possible to do nearly anything you’re 
 willing to research.&lt;/p&gt;
 
 &lt;p&gt;I’ve recently come across a few tools that, not all necessarily linked to Python,
-that have made working in the language both more pleasant and also productive.&lt;/p&gt;
+have made working in the language both more pleasant and also productive.&lt;/p&gt;
 
 &lt;h2 id=&quot;pyenv-and--virtualenv&quot;&gt;Pyenv and  Virtualenv&lt;/h2&gt;
 
-&lt;p&gt;Dealing with different versions of Python is hard. workin with different versions of packages
+&lt;p&gt;Dealing with different versions of Python is hard. working with different versions of packages
 within these versions is harder. If you work in Python for very long
 without using virtual environments you’ll undoubtedly end up with some conflicting 
 versions and a lengthy output from &lt;code&gt;pip freeze&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;I’ve recognized the benefits of virtual environments for awhile, but I could never
+&lt;p&gt;I’ve recognized the benefits of virtual environments for a while, but I could never
 commit to using them regularly because it always felt so clunky. Since the projects 
 I’m currently involved in are using entirely different versions of Python I finally 
 commited to finding a set up that worked for me.&lt;/p&gt;
@@ -139,7 +139,7 @@ much easier, and keeps your system organized and free of conflict.&lt;/p&gt;
 &lt;h2 id=&quot;setuptools-and-travis&quot;&gt;Setuptools and Travis&lt;/h2&gt;
 
 &lt;p&gt;I’ve also been using Travis as a contiuous integration service. As you’re developing
-something is going to break, and it won’t always be something that you’re expecting to.
+something is going to break, and it won’t always be something that you’re expecting.
 In fact, you usally won’t expect it at all.&lt;/p&gt;
 
 &lt;p&gt;Using Setuptools you can create a setup.py file used to create a distrubtable to 
@@ -162,7 +162,7 @@ and where your code is bare.&lt;/p&gt;
 handled, but the output does give you an idea of areas that could use some
 checks.&lt;/p&gt;
 
-&lt;p&gt;If nothing the button on my README keeps me accountable, which is useful so that 
+&lt;p&gt;If nothing else the button on my README keeps me accountable, which is useful so that 
 I don’t code blindly for hours only to realize I’ve broken some core functionality.&lt;/p&gt;
 
 &lt;p&gt;There are a ton of tools that make development more productive and fun. These are
@@ -247,7 +247,7 @@ numbers_squared = {number:number**2 for number in numbers}
 Keeping sessions configured and running keeps my work organized by delegating windows and panes to specific tasks.&lt;/p&gt;
 
 &lt;p&gt;I’m not a huge fan of leaving my machine running – for the reasons of both hardware and productivity preservation.
-Every time I shutdown I would lose my sessions, which was pretty annoying because its not often that I’m finished with
+Every time I shutdown I would lose my sessions, which was pretty annoying because it’s not often that I’m finished with
 a working environment after a single burst of working.&lt;/p&gt;
 
 &lt;p&gt;For instance, I like to keep a session for note taking and studying, which I use for an entire semester, and having to
@@ -256,7 +256,7 @@ configure windows and panes repeatedly completely destroys the benefits I gain f
 &lt;p&gt;Luckily, there’s a widely available project called Tmuxinator that allows you to script and configure commonly used
 sessions so that they can be renewed quickly in the case of the Tmux server terminating.&lt;/p&gt;
 
-&lt;p&gt;Example Configurations&lt;/p&gt;
+&lt;h4 id=&quot;example-configurations&quot;&gt;Example Configurations&lt;/h4&gt;
 
 &lt;p&gt;Simple configurations can go a long way. Here’s an example of how I might configure a note taking session if I was invested
 in learning both Python and Java.&lt;/p&gt;
@@ -305,14 +305,14 @@ simply moves to the Java directory and opens Vim to start taking notes.&lt;/p&gt
         <description>&lt;p&gt;Regular expressions, sequences of characters that define patterns, are widely applicable and strangely controversial.
 They can definitely be fickle and buggy. Often because they’re so terse and condensed regular expressions are 
 less readable than equivalent counterparts. However, they’re a fundamental aspect of modern software and
-for that reason alone simple regular expressions are a crucial part of any developers skill base.&lt;/p&gt;
+for that reason alone simple regular expressions are a crucial part of any developer’s skill base.&lt;/p&gt;
 
 &lt;h2 id=&quot;everyone-searches&quot;&gt;Everyone Searches.&lt;/h2&gt;
 
-&lt;p&gt;Cory Doctorow once wrote that regular expressions should be included as a core part of our education – along side
-word processors and PowerPoint. Though I want to stress that I love regex, I think that this is a bogus.&lt;/p&gt;
+&lt;p&gt;Cory Doctorow once wrote that regular expressions should be included as a core part of our education – alongside
+word processors and PowerPoint. Though I want to stress that I love regex, I think that this is bogus.&lt;/p&gt;
 
-&lt;p&gt;Foundationally, computer programs are built around the foundation of manipulating characters – searching, matching,
+&lt;p&gt;Computer programs are built around the foundation of manipulating characters – searching, matching,
 and acting according to what was found. For this reason a tool such as regular expressions can be invaluable for 
 developers, but the time spent learning and creating regex might outweigh the benefits for your average searcher.&lt;/p&gt;
 
@@ -341,7 +341,7 @@ and finally 2 to 6 characters&lt;/p&gt;
 &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Much like matching emails finding phone numbers is another dead simple way that regex can be incredibly useful.
-This pattern is as simple as finding 3 or more digit&lt;/p&gt;
+This pattern is as simple as finding 3 or more digits.&lt;/p&gt;
 
 &lt;p&gt;This is a great example of a regex that is absolutely inefficient and inexact that would be perfectly ok for an
 average user looking for phone numbers.&lt;/p&gt;
