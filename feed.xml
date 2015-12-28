@@ -5,9 +5,43 @@
     <description></description>
     <link>http://bencarothers.me/</link>
     <atom:link href="http://bencarothers.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 08 Dec 2015 10:33:07 -0500</pubDate>
-    <lastBuildDate>Tue, 08 Dec 2015 10:33:07 -0500</lastBuildDate>
+    <pubDate>Mon, 28 Dec 2015 00:22:57 -0500</pubDate>
+    <lastBuildDate>Mon, 28 Dec 2015 00:22:57 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Victor</title>
+        <description>&lt;h1 id=&quot;victor&quot;&gt;Victor&lt;/h1&gt;
+
+&lt;p&gt;I’ve decided to take on a project pretty far outside of my comfort zone. It’s 
+sort of an extension of my Twipy drip irrigation but much more extensible and 
+intensive. I’m working on creating a Nutrient Film Technique (NFT) hydroponic
+garden monitored and sustained by a collection of web services hosted on a 
+Raspberry Pi. I’m thinking that I’m going to make each of these restful so that
+they can be displayed in any number of ways and consumed by many different styles
+of application.&lt;/p&gt;
+
+&lt;p&gt;The project is likely to take a good deal of time, so I should be posting 
+a few more blog posts about the process. I want to keep a log of the build process
+so that I can see how things change as I learn more.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/nft.jpg&quot; alt=&quot;My System&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So far most of my time has been poured into the physical engineering of the garden. 
+I’m still not completely finished, but I’m definitely happy with how it’s coming through.
+My next step is to get the irrigation rigged up and start messing with some nutrient 
+solutions.&lt;/p&gt;
+
+&lt;p&gt;Then once the garden runs with out assistance I’ll probably work on implementing a
+monitor of water flow – the weakest feature of NFT.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 27 Dec 2015 02:10:00 -0500</pubDate>
+        <link>http://bencarothers.me/2015/12/27/NFT/</link>
+        <guid isPermaLink="true">http://bencarothers.me/2015/12/27/NFT/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Effective Commits</title>
